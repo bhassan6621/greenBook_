@@ -5,14 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.s1.login_.choosingSubjectSCreen"
-    tools:showIn="@layout/activity_choosing_subject_screen">
+    tools:context="com.example.s1.login_.testing"
+    tools:showIn="@layout/activity_testing">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="we did it "
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="49dp" />
 </android.support.constraint.ConstraintLayout>

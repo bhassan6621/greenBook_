@@ -13,8 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:name=".signUpScreen"
+            android:label="signUpScreen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".signInScreen"
+            android:label="GreenBook"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,21 +27,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".signUpScreen"
-            android:label="signUpScreen"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".signInScreen"
-            android:label="@string/title_activity_sign_in_screen"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".resetPassword"
             android:label="@string/title_activity_reset_password"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".choosingSubjectSCreen"
-            android:label="@string/title_activity_choosing_subject_screen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".choosingSubjects"
+            android:label="@string/title_activity_choosing_subjects"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".notes2"
+            android:label="@string/title_activity_notes2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AllNotes"
+            android:label="@string/title_activity_all_notes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name = ".updateDelete"
+            android:label="@string/title_activity_update_delete"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".pop"
+            android:theme="@style/AppTheme.CustomTheme">
+        </activity>
     </application>
 
 </manifest>

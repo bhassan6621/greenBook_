@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.s1.login_.updateDelete"
+    tools:showIn="@layout/activity_update_delete">
+
+    <EditText
+        android:id="@+id/notespart"
+        android:layout_width="391dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="55dp"
+        android:gravity="top"
+        android:hint="Type here..."
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Title"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:clickable="true"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="mini"
+        app:layout_anchor="@+id/include2"
+        app:layout_anchorGravity="bottom|center_horizontal"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:layout_anchor="@+id/include2"
+        app:layout_anchorGravity="bottom|right"
+        app:srcCompat="@android:drawable/ic_menu_save" />
+
+    <Button
+        android:id="@+id/backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_gravity="top|right"
+        android:layout_marginBottom="9dp"
+        android:background="@color/colorAccent"
+        android:backgroundTint="@color/btn_login_bg"
+        android:text="@string/btn_back"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        app:layout_anchor="@+id/include2"
+        app:layout_anchorGravity="bottom|left" />
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/content_notes2"
+        android:layout_height="519dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/sendNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:layout_anchor="@+id/include2"
+        app:layout_anchorGravity="top|right"
+        app:srcCompat="@android:drawable/ic_menu_send" />
+
+</android.support.design.widget.CoordinatorLayout>

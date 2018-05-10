@@ -17,7 +17,7 @@
     <string name="hint_password">Password</string>
     <string name="hint_name">Fullname</string>
     <string name="btn_login">LOGIN</string>
-    <string name="btn_link_to_register">Not a member? Get registered in Firebase now!</string>
+    <string name="btn_link_to_register">Not a member? Get registered in GreenBook now!</string>
     <string name="btn_link_to_login">Already registered. Login Me!</string>
     <string name="title_activity_reset_password">ResetPasswordActivity</string>
     <string name="btn_forgot_password">Forgot your password?</string>
@@ -33,5 +33,15 @@
     <string name="title_activity_signinscreen">signinscreen</string>
     <string name="title_activity_sign_in_screen">signInScreen</string>
     <string name="prompt_password">prompt password</string>
-    <string name="title_activity_choosing_subject_screen">choosingSubjectSCreen</string>
+    <string name="title_activity_choosing_subject_screen">choosingSubjectScreen</string>
+    <string name="title_activity_choosing_subjects">choosingSubjects</string>
+    <string name="title_activity_testing">testing</string>
+    <string name="title_activity_notes">notes</string>
+    <string name="title_activity_note">note</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_notes2">notes2</string>
+    <string name="title_activity_all_notes">AllNotes</string>
+    <string name="title_activity_update_delete">updateDelete</string>
 </resources>

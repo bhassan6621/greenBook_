@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class signUpScreen extends AppCompatActivity {
 
@@ -22,12 +24,14 @@ public class signUpScreen extends AppCompatActivity {
     private Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
+    private DatabaseReference mRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_sign_up_screen);
 
+        mRef = FirebaseDatabase.getInstance().getReference();
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
 
@@ -59,8 +63,8 @@ public class signUpScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String email = inputEmail.getText().toString().trim();
-                String password = inputPassword.getText().toString().trim();
+                final String email = inputEmail.getText().toString().trim();
+                final String password = inputPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
@@ -92,7 +96,9 @@ public class signUpScreen extends AppCompatActivity {
                                     Toast.makeText(signUpScreen.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    startActivity(new Intent(signUpScreen.this, MainActivity.class));
+                                    //mRef.push().setValue("username: " + email);
+                                    mRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("email").setValue(email);
+                                    startActivity(new Intent(signUpScreen.this, signInScreen.class));
                                     finish();
                                 }
                             }
@@ -107,4 +113,6 @@ public class signUpScreen extends AppCompatActivity {
         super.onResume();
         progressBar.setVisibility(View.GONE);
     }
+
+
 }
